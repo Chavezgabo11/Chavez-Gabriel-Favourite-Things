@@ -1,32 +1,46 @@
 (() => {
+
+    
     let buttons = document.querySelectorAll("button"),
-        //things = {};
+        things = {};
 
     function getData() {
         fetch("./data.json")
-        then(res => res.json())
+        .then(res => res.json())
         .then(data => {
+            console.log(data);
             things = data;
 
-            buildControls(data);
-            console.log(data);
+            showData(data);
         })
-        .catch(error => console.error(error));
     }
 
     function showData() {
+
         let key = this.dataset.key;
 
-        let photo_thing = document.getElementsByClassName("p_avatar"),
-            name_thing = document.getElementsByClassName("p_name"),
-            description_thing = document.getElementsByClassName("p_description");
+        console.log(key);
 
-        photo_thing.textContent = things[key].biopic;
+        const   photo_thing = document.getElementsByClassName("p_avatar"),
+                name_thing = document.getElementsByClassName("p_name"),
+                description_thing = document.getElementsByClassName("p_description");
+
+        photo_thing.querySelector('img').src = `images/${things[key].biopic}`;
         name_thing.textContent = things[key].name;
         description_thing.textContent = things[key].description;
+        
+        if (key === "Thing1") {
+            photo_thing.querySelector('img').src = `images/${things[key].biopic}`;
+            name_thing.textContent = things[key].name;
+            description_thing.textContent = things[key].description;
+        } else {
+            
+        }
+        
+
     }
 
-    getData(null);
+    getData();
 
     buttons.forEach(button => button.addEventListener("click", showData));
 })()

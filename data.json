@@ -2,21 +2,21 @@
     "Thing1": {
         "name":"Video Games",
         "biopic":"video-games.jpg",
-        "description": "XD"
+        "description": "I like to play video games with my friends in my opinion is a way to de-stress me when I have a lot of homework."
     },
     "Thing2": {
         "name":"Movie Night",
         "biopic":"movie-night.jpg",
-        "description": "XD"
+        "description": "I like to play video games with my friends in my opinion is a way to de-stress me when I have a lot of homework."
     },
     "Thing3": {
         "name":"Drive",
         "biopic":"driving.jpg",
-        "description": "XD"
+        "description": "I like to play video games with my friends in my opinion is a way to de-stress me when I have a lot of homework."
     },
     "Thing4": {
         "name":"Listen to Music",
         "biopic":"listen-music.jpg",
-        "description": "XD"
+        "description": "I like to play video games with my friends in my opinion is a way to de-stress me when I have a lot of homework."
     }
   }
