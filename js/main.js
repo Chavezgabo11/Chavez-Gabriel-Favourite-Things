@@ -1,7 +1,4 @@
 (() => {
-    const   theTeam = document.querySelector("#team-members"),
-            theTemplate = document.querySelector("#bio-template").content;
-
     let buttons = document.querySelectorAll("button"),
         //things = {};
 
@@ -12,6 +9,7 @@
             things = data;
 
             buildControls(data);
+            console.log(data);
         })
         .catch(error => console.error(error));
     }
@@ -28,7 +26,7 @@
         description_thing.textContent = things[key].description;
     }
 
-    getData(null, showData);
+    getData(null);
 
     buttons.forEach(button => button.addEventListener("click", showData));
 })()
