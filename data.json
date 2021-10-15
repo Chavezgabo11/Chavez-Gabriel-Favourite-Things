@@ -7,16 +7,16 @@
     "Thing2": {
         "name":"Movie Night",
         "biopic":"movie-night.jpg",
-        "description": "I like to play video games with my friends in my opinion is a way to de-stress me when I have a lot of homework."
+        "description": "I like to watch movies at night after classes or work, I like to watch with my family and friends."
     },
     "Thing3": {
         "name":"Drive",
         "biopic":"driving.jpg",
-        "description": "I like to play video games with my friends in my opinion is a way to de-stress me when I have a lot of homework."
+        "description": "I like to drive when it's raining my family thinks that is weird but I feel it relaxing."
     },
     "Thing4": {
         "name":"Listen to Music",
         "biopic":"listen-music.jpg",
-        "description": "I like to play video games with my friends in my opinion is a way to de-stress me when I have a lot of homework."
+        "description": "I like to listen to music or podcast meanwhile driving or doing homework, I like to have white noise or a conversation in the background so I don't feel stressed."
     }
   }
