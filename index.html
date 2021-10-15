@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Working With AJAX</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <title>My Favourite Things</title>
 </head>
 <body>
-    <H1>This is my index page</H1>
+    <H1>My Favourite Things</H1>
 
     <section id="teamSection"></section>
+
+
+    <h1 id="thing">data</h1>
 
     <!-- template tags at the bottom -->
     <!-- template tags don't get rendered - they just reusable content -->
@@ -19,13 +27,17 @@
                 <img src="" alt="">
             </div>
     
-            <h2 class="p_name"></h2> <!--this is index 1-->
-            <h3 class="p_role"></h3> <!--this is index 2-->
-            <p class="p-description"> <!--this is index 3-->
+            <h2 class="p_name"></h2> <!--this is index 2-->
+            <p class="p_description"> <!--this is index 3-->
                 
             </p>
         </section>
     </template>
+
+    <button data-key="Thing1">Video Games</button>
+    <button data-key="Thing2">Movie Night</button>
+    <button data-key="Thing3">Drive</button>
+    <button data-key="Thing4">Listen to Music</button>
 
     <script src="js/main.js" type="module" defer></script>
 </body>
