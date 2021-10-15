@@ -10,8 +10,6 @@
         .then(data => {
             console.log(data);
             things = data;
-
-            showData(data);
         })
     }
 
