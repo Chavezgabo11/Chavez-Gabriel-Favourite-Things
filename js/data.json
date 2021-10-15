@@ -1,0 +1,22 @@
+{
+    "Thing1": {
+        "name":"Video Games",
+        "biopic":"video-games.jpg",
+        "description": "XD"
+    },
+    "Thing2": {
+        "name":"Movie Night",
+        "biopic":"movie-night.jpg",
+        "description": "XD"
+    },
+    "Thing3": {
+        "name":"Drive",
+        "biopic":"driving.jpg",
+        "description": "XD"
+    },
+    "Thing4": {
+        "name":"Listen to Music",
+        "biopic":"listen-music.jpg",
+        "description": "XD"
+    }
+  }

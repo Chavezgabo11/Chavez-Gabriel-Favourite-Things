@@ -1,48 +1,34 @@
-import { getData } from "./components/TheDataMiner.js";
-
 (() => {
-    const   theTeam = document.querySelector("#teamSection"),
+    const   theTeam = document.querySelector("#team-members"),
             theTemplate = document.querySelector("#bio-template").content;
 
-    function buildTeam(info) {
+    let buttons = document.querySelectorAll("button"),
+        //things = {};
 
-        info.forEach(person => {
-            let panel = theTemplate.cloneNode(true);  //make a copy of the template content
-            let memberInfo = panel.firstElementChild.children; // get a reference to the template content
+    function getData() {
+        fetch("./data.json")
+        then(res => res.json())
+        .then(data => {
+            things = data;
 
-            //cycle through the child elements inside the <section> tag in the <template> tag
-            //and update their attributes
-
-            panel.firstElementChild.dataset.key = person.id;
-
-            //add the image
-            memberInfo[0].querySelector(`img`).src = `images/${person.biopic}`;
-            //memberInfo[1].textContent = person.name;
-            //memberInfo[2].textContent = person.role;
-            //memberInfo[3].textContent = person.nickname;
-
-            theTeam.appendChild(panel);
+            buildControls(data);
         })
+        .catch(error => console.error(error));
     }
 
-    function getMoreData(event) {
-        if (event.target.closest("section").dataset.key) {
-            let key = event.target.closest("section").dataset.key;
+    function showData() {
+        let key = this.dataset.key;
 
-            getData({id: key}, showPortfolioData);
-        }
+        let photo_thing = document.getElementsByClassName("p_avatar"),
+            name_thing = document.getElementsByClassName("p_name"),
+            description_thing = document.getElementsByClassName("p_description");
+
+        photo_thing.textContent = things[key].biopic;
+        name_thing.textContent = things[key].name;
+        description_thing.textContent = things[key].description;
     }
 
+    getData(null, showData);
 
-    function showPortfolioData(data) {
-        console.log(data);
-    }
-
-    //When we click on a bio, we want to retrieve the custom data atrribute that refers to the refers to the row of data
-    //that represents this person in the DB
-    //we then pass that ID to our data miner, which in turn passes it to index.php as the query string parameter
-    theTeam.addEventListener("click", getMoreData);
-
-    //pass the build team function to our data miner as a callback
-    getData(null, buildTeam);
-})();
+    buttons.forEach(button => button.addEventListener("click", showData));
+})()
