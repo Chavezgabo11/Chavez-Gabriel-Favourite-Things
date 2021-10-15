@@ -29,14 +29,6 @@
         name_thing.textContent = things[key].name;
         description_thing.textContent = things[key].description;
         
-        if (key === "Thing1") {
-            photo_thing.querySelector('img').src = `images/${things[key].biopic}`;
-            name_thing.textContent = things[key].name;
-            description_thing.textContent = things[key].description;
-        } else {
-            
-        }
-        
 
     }
 
